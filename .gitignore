@@ -1,27 +1,30 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+# ----------------- 기본 무시 패턴 -----------------
 HELP.md
-.gradle
+.gradle/
 build/
-# !gradle/wrapper/gradle-wrapper.jar
+
+# gradle wrapper: GitHub Actions용 JAR 포함해야 하므로 무시하지 않음
+# !gradle/wrapper/gradle-wrapper.jar   ← 주석 처리 또는 삭제
+
+# 소스 내부 build 디렉터리
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### STS ###
-.apt_generated
+# --- IDE / 도구별 ---
+## STS / Eclipse
+.apt_generated/
 .classpath
 .factorypath
 .project
-.settings
-.springBeans
-.sts4-cache
+.settings/
+.springBeans/
+.sts4-cache/
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
-### IntelliJ IDEA ###
-.idea
+## IntelliJ IDEA
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -29,30 +32,26 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-### NetBeans ###
+## NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
+## VS Code
 .vscode/
-=======
->>>>>>> 235052e (2025.06.18)
+
+# -------------- 공통 바이너리/로그 --------------
 # Compiled class file
 *.class
-
 # Log file
 *.log
-
 # BlueJ files
 *.ctxt
-
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-
-# Package Files #
+# Package files
 *.jar
 *.war
 *.nar
@@ -60,11 +59,6 @@ out/
 *.zip
 *.tar.gz
 *.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# JVM crash logs
 hs_err_pid*
 replay_pid*
-<<<<<<< HEAD
-=======
->>>>>>> branch 'master' of https://github.com/chaijewon/devops5.git
->>>>>>> 235052e (2025.06.18)
